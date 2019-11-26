@@ -8,8 +8,8 @@
 
 require 'faker'
 
-#Actor.delete_all
-#Film.delete_all
+Actor.delete_all
+Film.delete_all
 10.times do
     actor = Actor.new
     actor.first_name = Faker::Name.first_name
@@ -18,8 +18,7 @@ require 'faker'
 10.times do
     film = Film.new
     film.title = Faker::Film.title
-    #film.type = Faker::Film.type
-    film.country = Faker::Film.country
+    film.country = Faker::Country.country
     film.actor_id = actor_id
     film.save
 end
