@@ -3,8 +3,6 @@ class Actor < ActiveRecord::Base
     accepts_nested_attributes_for :film
         validates :first_name,
                     presence: true
-
-        def to_s
-            first_name
-        end
+        validates :last_name,
+                    presence: true
 end

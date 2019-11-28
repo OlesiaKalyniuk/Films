@@ -2,12 +2,10 @@
 
 one:
   title: MyString
-  type: 
   country: MyString
   actor_id: 
 
 two:
   title: MyString
-  type: 
   country: MyString
   actor_id: 

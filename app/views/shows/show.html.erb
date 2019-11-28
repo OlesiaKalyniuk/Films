@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Times:</strong>
+  <%= @show.times %>
+</p>
+
+<p>
+  <strong>Film:</strong>
+  <%= @show.film %>
+</p>
+
+<%= link_to 'Edit', edit_show_path(@show) %> |
+<%= link_to 'Back', shows_path %>

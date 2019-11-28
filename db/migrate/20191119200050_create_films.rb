@@ -2,7 +2,6 @@ class CreateFilms < ActiveRecord::Migration
   def change
     create_table :films do |t|
       t.string :title
-      t.string :type
       t.string :country
       t.references :actor, index: true, foreign_key: true
 

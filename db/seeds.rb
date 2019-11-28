@@ -10,6 +10,7 @@ require 'faker'
 
 Actor.delete_all
 Film.delete_all
+Show.delete_all
 10.times do
     actor = Actor.new
     actor.first_name = Faker::Name.first_name
@@ -17,9 +18,15 @@ Film.delete_all
     actor.save
 10.times do
     film = Film.new
-    film.title = Faker::Film.title
-    film.country = Faker::Country.country
-    film.actor_id = actor_id
+    film.title = Faker::Book.title
+    film.country = Faker::Address.country
+    film.actor_id = actor.id
     film.save
+10.times do
+    show = Show.new
+    show.times = Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)
+    show.film_id = film.id
+    show.save
+end
 end
 end
