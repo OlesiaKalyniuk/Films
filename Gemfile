@@ -45,7 +45,7 @@ group :development, :test do
   gem 'byebug'
 end
 
-group :development, :test do
+group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
  
   gem 'sqlite3'
@@ -60,6 +60,6 @@ group :development do
 end
 
 group :production do 
-  gem 'pg', '~> 0.18'
-
+  gem 'pg'
+  gem 'rails_12factor'
   end
